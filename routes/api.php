@@ -21,5 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['path' => '/game'], function () {
     Route::post('/start', 'GameController@start');
     Route::get('/{id}', 'GameController@show');
+
+    Route::post('/{id}/bingo', 'GameController@generateBingo');
 });
 
