@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Game;
-use GameRepository;
+use App\Repositories\GameRepository;
 
 class GameController extends Controller
 {

@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GameController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +19,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::group(['path' => '/game'], function () {
-    Route::post('/start', 'GameController@start');
-    Route::get('/{id}', 'GameController@show');
+Route::group(['prefix' => 'game'], function () {
+    Route::post('/start', [GameController::class, 'start']);
+    Route::get('/{id}', [GameController::class, 'show']);
 
-    Route::post('/{id}/bingo', 'GameController@generateBingo');
+    Route::post('/{id}/bingo', [GameController::class, 'generateBingo']);
 });
 

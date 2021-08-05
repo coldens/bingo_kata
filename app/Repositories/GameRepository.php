@@ -1,8 +1,11 @@
 <?php
 
+namespace App\Repositories;
+
 use App\Models\BingoCard;
 use App\Models\Game;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Log;
 
 class GameRepository {
     public function start() {
@@ -45,11 +48,11 @@ class GameRepository {
 
         $letters = $bingo->generateCard();
 
-        $card = new Collection();
+        $card = [];
 
         foreach ($letters as $letter) {
             foreach ($letter['value'] as $value) {
-                $card->push(['letter' => $letter, 'value' => $value]);
+                $card[] = ['letter' => $letter['letter'], 'value' => $value];
             }
         }
 

@@ -11,6 +11,10 @@ class BingoCardNumber extends Model
 
     protected $guarded = [];
 
+    protected $casts = [
+        'check' => 'boolean',
+    ];
+
     public function bingo()
     {
         return $this->hasOne(Bingo::class, 'id', 'bingo_id');
