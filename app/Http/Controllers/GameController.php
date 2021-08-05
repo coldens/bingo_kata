@@ -51,16 +51,25 @@ class GameController extends Controller
         return $result;
     }
 
+    /**
+     * Generate a new bingo card.
+     */
     public function generateBingo($id)
     {
         return $this->gameRepository->generateBingo($id);
     }
 
+    /**
+     * For check the bingo card.
+     */
     public function getBingoCard($id, $bingo_id)
     {
         return $this->gameRepository->getBingoCard($id, $bingo_id);
     }
 
+    /**
+     * for update the bingo card
+     */
     public function checkNumber(Request $request)
     {
         $bingo_id = $request->get('bingo_id');
@@ -68,5 +77,13 @@ class GameController extends Controller
         $value = $request->get('value');
 
         return $this->bingoRepository->checkNumber($bingo_id, $letter, $value);
+    }
+
+    /**
+     * for set the winner.
+     */
+    public function winner($game_id, $bingo_id)
+    {
+        return $this->bingoRepository->winner($game_id, $bingo_id);
     }
 }

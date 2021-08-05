@@ -27,5 +27,6 @@ Route::group(['prefix' => 'game'], function () {
     Route::post('/{id}/bingo', [GameController::class, 'generateBingo']);
     Route::get('/{id}/bingo/{bingo_id}', [GameController::class, 'getBingoCard']);
     Route::put('/{id}/bingo', [GameController::class, 'checkNumber']);
+    Route::put('/{id}/bingo/{bingo_id}', [GameController::class, 'winner']);
 });
 

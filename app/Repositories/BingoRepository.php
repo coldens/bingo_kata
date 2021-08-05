@@ -29,4 +29,19 @@ class BingoRepository
 
         return $bingo->refresh();
     }
+
+    public function winner($game_id, $bingo_id)
+    {
+        /**
+         * @var BingoCard
+         */
+        $bingo = BingoCard::with('numbers')->where('game_id', $game_id)->where('id', $bingo_id)->first();
+
+        if ($bingo->numbers->where('check', false)->count() === 0) {
+            $bingo->winner = true;
+            $bingo->save();
+        }
+
+        return $bingo->refresh();
+    }
 }

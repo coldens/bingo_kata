@@ -11,6 +11,9 @@ class BingoCard extends Model
     use HasFactory;
 
     protected $guarded = [];
+    protected $casts = [
+        'winner' => 'boolean',
+    ];
 
     public function numbers()
     {
