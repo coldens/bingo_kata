@@ -36,11 +36,24 @@ class GameController extends Controller
      */
     public function getNumber($id)
     {
-        return $this->gameRepository->generateNumber($id);
+        $result = $this->gameRepository->generateNumber($id);
+
+        if ($result === false) {
+            return [
+                'message' => 'the game is finished.',
+            ];
+        }
+
+        return $result;
     }
 
     public function generateBingo($id)
     {
         return $this->gameRepository->generateBingo($id);
+    }
+
+    public function getBingoCard($id, $bingo_id)
+    {
+        return $this->gameRepository->getBingoCard($id, $bingo_id);
     }
 }

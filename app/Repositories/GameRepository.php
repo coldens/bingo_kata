@@ -63,4 +63,9 @@ class GameRepository {
 
         return $bingo->load('numbers');
     }
+
+    public function getBingoCard($id, $bingo_id)
+    {
+        return BingoCard::with('numbers')->where('game_id', $id)->where('id', $bingo_id)->first();
+    }
 }

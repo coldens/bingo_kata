@@ -22,7 +22,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['prefix' => 'game'], function () {
     Route::post('/start', [GameController::class, 'start']);
     Route::get('/{id}', [GameController::class, 'show']);
+    Route::get('/{id}/get-number', [GameController::class, 'getNumber']);
 
     Route::post('/{id}/bingo', [GameController::class, 'generateBingo']);
+    Route::get('/{id}/bingo/{bingo_id}', [GameController::class, 'getBingoCard']);
 });
 
