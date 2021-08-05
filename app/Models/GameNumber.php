@@ -11,12 +11,6 @@ class GameNumber extends Model
 
     protected $guarded = [];
 
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
-
     public function game()
     {
         return $this->hasOne(Game::class, 'id', 'game_id');

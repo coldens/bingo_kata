@@ -4,8 +4,6 @@ namespace App\Repositories;
 
 use App\Models\BingoCard;
 use App\Models\Game;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Log;
 
 class GameRepository {
     public function start() {
@@ -25,7 +23,12 @@ class GameRepository {
         /**
          * @var Game
          */
-        $game = Game::find($id);
+        $game = Game::with('numbers')->find($id);
+
+        if ($game->numbers->count() === 75) {
+            return false;
+        }
+
         $result = $game->numberGenerator();
 
         if ($result === false) {

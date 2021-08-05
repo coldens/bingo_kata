@@ -37,10 +37,13 @@ class Game extends Model
             return false;
         }
 
+        $letters = array_keys(Game::RANGE_OF_NUMBERS);
+
         /**
          * Get a random of valid letter but exclude from $exclude array
          */
-        $letter  = array_rand(array_keys(Arr::except(Game::RANGE_OF_NUMBERS, $exclude)), 1);
+        $key     = array_rand(array_keys(Arr::except(Game::RANGE_OF_NUMBERS, $exclude)), 1);
+        $letter  = $letters[$key];
         $current = $this->numbers()->getQuery()->where('letter', $letter)->get();
 
         /**
@@ -61,7 +64,7 @@ class Game extends Model
             return $item->value === $number;
         }) != null);
 
-        return [$letter, $number];
+        return ['letter' => $letter, 'value' => $number];
     }
 
     public function randomByLetter(string $letter)

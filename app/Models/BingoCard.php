@@ -41,7 +41,7 @@ class BingoCard extends Model
         do {
             $result[] = random_int($min, $max);
             $result   = array_unique($result);
-        } while (count($result) < 6);
+        } while (count($result) < 5);
 
         if ($letter === 'N') {
             $result = Arr::except($result, [2]);
