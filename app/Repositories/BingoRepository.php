@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Models\BingoCard;
 use App\Models\BingoNumber;
+use App\Models\Game;
 
 class BingoRepository
 {
@@ -36,10 +37,13 @@ class BingoRepository
          * @var BingoCard
          */
         $bingo = BingoCard::with('numbers')->where('game_id', $game_id)->where('id', $bingo_id)->first();
+        $game = Game::find($game_id);
 
         if ($bingo->numbers->where('check', false)->count() === 0) {
             $bingo->winner = true;
             $bingo->save();
+            $game->finished = true;
+            $game->save();
         }
 
         return $bingo->refresh();

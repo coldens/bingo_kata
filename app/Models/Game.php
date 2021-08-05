@@ -11,6 +11,9 @@ class Game extends Model
     use HasFactory;
 
     protected $guarded = [];
+    protected $casts = [
+        'finished' => 'boolean',
+    ];
 
     const RANGE_OF_NUMBERS = [
         'B' => [1, 15],
