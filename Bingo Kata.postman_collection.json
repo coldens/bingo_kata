@@ -1,0 +1,575 @@
+{
+	"info": {
+		"_postman_id": "ad892d4c-31d0-468c-b026-55ff808703e3",
+		"name": "Bingo Kata",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Start Game",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/game/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"game",
+						"start"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Start Game",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/game/start",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"game",
+								"start"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Aug 2021 04:15:07 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Aug 2021 04:15:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.22"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"updated_at\": \"2021-08-05T04:15:07.000000Z\",\n    \"created_at\": \"2021-08-05T04:15:07.000000Z\",\n    \"id\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Random Number for game",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/game/{game_id}/get-number",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"game",
+						"{game_id}",
+						"get-number"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Random Number for game",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/game/2/get-number",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"game",
+								"2",
+								"get-number"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Aug 2021 04:15:35 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Aug 2021 04:15:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.22"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"letter\": \"N\",\n    \"value\": 34\n}"
+				}
+			]
+		},
+		{
+			"name": "New Bingo Card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/game/{game_id}/bingo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"game",
+						"{game_id}",
+						"bingo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Bingo Card",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/game/2/bingo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"game",
+								"2",
+								"bingo"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Aug 2021 04:16:22 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Aug 2021 04:16:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.22"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"game_id\": \"2\",\n    \"updated_at\": \"2021-08-05T04:16:17.000000Z\",\n    \"created_at\": \"2021-08-05T04:16:17.000000Z\",\n    \"id\": 4,\n    \"numbers\": [\n        {\n            \"id\": 85,\n            \"bingo_id\": 4,\n            \"letter\": \"B\",\n            \"value\": 3,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:17.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:17.000000Z\"\n        },\n        {\n            \"id\": 83,\n            \"bingo_id\": 4,\n            \"letter\": \"B\",\n            \"value\": 8,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:17.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:17.000000Z\"\n        },\n        {\n            \"id\": 87,\n            \"bingo_id\": 4,\n            \"letter\": \"B\",\n            \"value\": 11,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:18.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:18.000000Z\"\n        },\n        {\n            \"id\": 84,\n            \"bingo_id\": 4,\n            \"letter\": \"B\",\n            \"value\": 12,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:17.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:17.000000Z\"\n        },\n        {\n            \"id\": 86,\n            \"bingo_id\": 4,\n            \"letter\": \"B\",\n            \"value\": 13,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:18.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:18.000000Z\"\n        },\n        {\n            \"id\": 92,\n            \"bingo_id\": 4,\n            \"letter\": \"I\",\n            \"value\": 19,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:19.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:19.000000Z\"\n        },\n        {\n            \"id\": 91,\n            \"bingo_id\": 4,\n            \"letter\": \"I\",\n            \"value\": 20,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:19.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:19.000000Z\"\n        },\n        {\n            \"id\": 88,\n            \"bingo_id\": 4,\n            \"letter\": \"I\",\n            \"value\": 23,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:18.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:18.000000Z\"\n        },\n        {\n            \"id\": 90,\n            \"bingo_id\": 4,\n            \"letter\": \"I\",\n            \"value\": 28,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:19.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:19.000000Z\"\n        },\n        {\n            \"id\": 89,\n            \"bingo_id\": 4,\n            \"letter\": \"I\",\n            \"value\": 29,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:19.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:19.000000Z\"\n        },\n        {\n            \"id\": 94,\n            \"bingo_id\": 4,\n            \"letter\": \"N\",\n            \"value\": 33,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:20.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:20.000000Z\"\n        },\n        {\n            \"id\": 95,\n            \"bingo_id\": 4,\n            \"letter\": \"N\",\n            \"value\": 39,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:20.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:20.000000Z\"\n        },\n        {\n            \"id\": 96,\n            \"bingo_id\": 4,\n            \"letter\": \"N\",\n            \"value\": 40,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:20.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:20.000000Z\"\n        },\n        {\n            \"id\": 93,\n            \"bingo_id\": 4,\n            \"letter\": \"N\",\n            \"value\": 41,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:19.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:19.000000Z\"\n        },\n        {\n            \"id\": 99,\n            \"bingo_id\": 4,\n            \"letter\": \"G\",\n            \"value\": 48,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:20.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:20.000000Z\"\n        },\n        {\n            \"id\": 97,\n            \"bingo_id\": 4,\n            \"letter\": \"G\",\n            \"value\": 49,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:20.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:20.000000Z\"\n        },\n        {\n            \"id\": 101,\n            \"bingo_id\": 4,\n            \"letter\": \"G\",\n            \"value\": 51,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:21.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:21.000000Z\"\n        },\n        {\n            \"id\": 100,\n            \"bingo_id\": 4,\n            \"letter\": \"G\",\n            \"value\": 54,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:21.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:21.000000Z\"\n        },\n        {\n            \"id\": 98,\n            \"bingo_id\": 4,\n            \"letter\": \"G\",\n            \"value\": 55,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:20.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:20.000000Z\"\n        },\n        {\n            \"id\": 104,\n            \"bingo_id\": 4,\n            \"letter\": \"O\",\n            \"value\": 61,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:21.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:21.000000Z\"\n        },\n        {\n            \"id\": 105,\n            \"bingo_id\": 4,\n            \"letter\": \"O\",\n            \"value\": 62,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:21.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:21.000000Z\"\n        },\n        {\n            \"id\": 106,\n            \"bingo_id\": 4,\n            \"letter\": \"O\",\n            \"value\": 65,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:21.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:21.000000Z\"\n        },\n        {\n            \"id\": 103,\n            \"bingo_id\": 4,\n            \"letter\": \"O\",\n            \"value\": 73,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:21.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:21.000000Z\"\n        },\n        {\n            \"id\": 102,\n            \"bingo_id\": 4,\n            \"letter\": \"O\",\n            \"value\": 74,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:21.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:21.000000Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Show the bingo card",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/game/{game_id}/bingo/{bingo_id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"game",
+						"{game_id}",
+						"bingo",
+						"{bingo_id}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Show the bingo card",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/game/2/bingo/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"game",
+								"2",
+								"bingo",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Aug 2021 04:17:05 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Aug 2021 04:17:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.22"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"game_id\": 2,\n    \"winner\": false,\n    \"created_at\": \"2021-08-05T04:16:17.000000Z\",\n    \"updated_at\": \"2021-08-05T04:16:17.000000Z\",\n    \"numbers\": [\n        {\n            \"id\": 85,\n            \"bingo_id\": 4,\n            \"letter\": \"B\",\n            \"value\": 3,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:17.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:17.000000Z\"\n        },\n        {\n            \"id\": 83,\n            \"bingo_id\": 4,\n            \"letter\": \"B\",\n            \"value\": 8,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:17.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:17.000000Z\"\n        },\n        {\n            \"id\": 87,\n            \"bingo_id\": 4,\n            \"letter\": \"B\",\n            \"value\": 11,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:18.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:18.000000Z\"\n        },\n        {\n            \"id\": 84,\n            \"bingo_id\": 4,\n            \"letter\": \"B\",\n            \"value\": 12,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:17.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:17.000000Z\"\n        },\n        {\n            \"id\": 86,\n            \"bingo_id\": 4,\n            \"letter\": \"B\",\n            \"value\": 13,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:18.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:18.000000Z\"\n        },\n        {\n            \"id\": 92,\n            \"bingo_id\": 4,\n            \"letter\": \"I\",\n            \"value\": 19,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:19.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:19.000000Z\"\n        },\n        {\n            \"id\": 91,\n            \"bingo_id\": 4,\n            \"letter\": \"I\",\n            \"value\": 20,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:19.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:19.000000Z\"\n        },\n        {\n            \"id\": 88,\n            \"bingo_id\": 4,\n            \"letter\": \"I\",\n            \"value\": 23,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:18.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:18.000000Z\"\n        },\n        {\n            \"id\": 90,\n            \"bingo_id\": 4,\n            \"letter\": \"I\",\n            \"value\": 28,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:19.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:19.000000Z\"\n        },\n        {\n            \"id\": 89,\n            \"bingo_id\": 4,\n            \"letter\": \"I\",\n            \"value\": 29,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:19.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:19.000000Z\"\n        },\n        {\n            \"id\": 94,\n            \"bingo_id\": 4,\n            \"letter\": \"N\",\n            \"value\": 33,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:20.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:20.000000Z\"\n        },\n        {\n            \"id\": 95,\n            \"bingo_id\": 4,\n            \"letter\": \"N\",\n            \"value\": 39,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:20.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:20.000000Z\"\n        },\n        {\n            \"id\": 96,\n            \"bingo_id\": 4,\n            \"letter\": \"N\",\n            \"value\": 40,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:20.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:20.000000Z\"\n        },\n        {\n            \"id\": 93,\n            \"bingo_id\": 4,\n            \"letter\": \"N\",\n            \"value\": 41,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:19.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:19.000000Z\"\n        },\n        {\n            \"id\": 99,\n            \"bingo_id\": 4,\n            \"letter\": \"G\",\n            \"value\": 48,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:20.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:20.000000Z\"\n        },\n        {\n            \"id\": 97,\n            \"bingo_id\": 4,\n            \"letter\": \"G\",\n            \"value\": 49,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:20.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:20.000000Z\"\n        },\n        {\n            \"id\": 101,\n            \"bingo_id\": 4,\n            \"letter\": \"G\",\n            \"value\": 51,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:21.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:21.000000Z\"\n        },\n        {\n            \"id\": 100,\n            \"bingo_id\": 4,\n            \"letter\": \"G\",\n            \"value\": 54,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:21.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:21.000000Z\"\n        },\n        {\n            \"id\": 98,\n            \"bingo_id\": 4,\n            \"letter\": \"G\",\n            \"value\": 55,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:20.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:20.000000Z\"\n        },\n        {\n            \"id\": 104,\n            \"bingo_id\": 4,\n            \"letter\": \"O\",\n            \"value\": 61,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:21.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:21.000000Z\"\n        },\n        {\n            \"id\": 105,\n            \"bingo_id\": 4,\n            \"letter\": \"O\",\n            \"value\": 62,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:21.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:21.000000Z\"\n        },\n        {\n            \"id\": 106,\n            \"bingo_id\": 4,\n            \"letter\": \"O\",\n            \"value\": 65,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:21.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:21.000000Z\"\n        },\n        {\n            \"id\": 103,\n            \"bingo_id\": 4,\n            \"letter\": \"O\",\n            \"value\": 73,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:21.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:21.000000Z\"\n        },\n        {\n            \"id\": 102,\n            \"bingo_id\": 4,\n            \"letter\": \"O\",\n            \"value\": 74,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:21.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:21.000000Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Check the winner",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/game/{game_id}/bingo/{bingo_id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"game",
+						"{game_id}",
+						"bingo",
+						"{bingo_id}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Check the winner",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/game/1/bingo/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"game",
+								"1",
+								"bingo",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Aug 2021 04:17:35 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Aug 2021 04:17:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.22"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"game_id\": 1,\n    \"winner\": false,\n    \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n    \"updated_at\": \"2021-08-05T03:32:38.000000Z\",\n    \"numbers\": [\n        {\n            \"id\": 61,\n            \"bingo_id\": 3,\n            \"letter\": \"B\",\n            \"value\": 1,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        },\n        {\n            \"id\": 59,\n            \"bingo_id\": 3,\n            \"letter\": \"B\",\n            \"value\": 4,\n            \"check\": true,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T04:02:24.000000Z\"\n        },\n        {\n            \"id\": 60,\n            \"bingo_id\": 3,\n            \"letter\": \"B\",\n            \"value\": 5,\n            \"check\": true,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:54:08.000000Z\"\n        },\n        {\n            \"id\": 63,\n            \"bingo_id\": 3,\n            \"letter\": \"B\",\n            \"value\": 11,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        },\n        {\n            \"id\": 62,\n            \"bingo_id\": 3,\n            \"letter\": \"B\",\n            \"value\": 15,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        },\n        {\n            \"id\": 64,\n            \"bingo_id\": 3,\n            \"letter\": \"I\",\n            \"value\": 17,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        },\n        {\n            \"id\": 68,\n            \"bingo_id\": 3,\n            \"letter\": \"I\",\n            \"value\": 18,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        },\n        {\n            \"id\": 66,\n            \"bingo_id\": 3,\n            \"letter\": \"I\",\n            \"value\": 20,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        },\n        {\n            \"id\": 65,\n            \"bingo_id\": 3,\n            \"letter\": \"I\",\n            \"value\": 24,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        },\n        {\n            \"id\": 67,\n            \"bingo_id\": 3,\n            \"letter\": \"I\",\n            \"value\": 28,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        },\n        {\n            \"id\": 71,\n            \"bingo_id\": 3,\n            \"letter\": \"N\",\n            \"value\": 33,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        },\n        {\n            \"id\": 72,\n            \"bingo_id\": 3,\n            \"letter\": \"N\",\n            \"value\": 34,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        },\n        {\n            \"id\": 69,\n            \"bingo_id\": 3,\n            \"letter\": \"N\",\n            \"value\": 37,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        },\n        {\n            \"id\": 70,\n            \"bingo_id\": 3,\n            \"letter\": \"N\",\n            \"value\": 40,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        },\n        {\n            \"id\": 77,\n            \"bingo_id\": 3,\n            \"letter\": \"G\",\n            \"value\": 46,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        },\n        {\n            \"id\": 74,\n            \"bingo_id\": 3,\n            \"letter\": \"G\",\n            \"value\": 51,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        },\n        {\n            \"id\": 73,\n            \"bingo_id\": 3,\n            \"letter\": \"G\",\n            \"value\": 54,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        },\n        {\n            \"id\": 76,\n            \"bingo_id\": 3,\n            \"letter\": \"G\",\n            \"value\": 56,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        },\n        {\n            \"id\": 75,\n            \"bingo_id\": 3,\n            \"letter\": \"G\",\n            \"value\": 60,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        },\n        {\n            \"id\": 78,\n            \"bingo_id\": 3,\n            \"letter\": \"O\",\n            \"value\": 61,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        },\n        {\n            \"id\": 80,\n            \"bingo_id\": 3,\n            \"letter\": \"O\",\n            \"value\": 64,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        },\n        {\n            \"id\": 81,\n            \"bingo_id\": 3,\n            \"letter\": \"O\",\n            \"value\": 69,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        },\n        {\n            \"id\": 79,\n            \"bingo_id\": 3,\n            \"letter\": \"O\",\n            \"value\": 73,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        },\n        {\n            \"id\": 82,\n            \"bingo_id\": 3,\n            \"letter\": \"O\",\n            \"value\": 74,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T03:32:38.000000Z\",\n            \"updated_at\": \"2021-08-05T03:32:38.000000Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Check a number",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bingo_id\": 4,\r\n    \"letter\": \"O\",\r\n    \"value\": 73\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/game/{game_id}/bingo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"game",
+						"{game_id}",
+						"bingo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Check a number",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bingo_id\": 4,\r\n    \"letter\": \"O\",\r\n    \"value\": 73\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/game/2/bingo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"game",
+								"2",
+								"bingo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Aug 2021 04:23:25 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Aug 2021 04:23:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.22"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"game_id\": 2,\n    \"winner\": false,\n    \"created_at\": \"2021-08-05T04:16:17.000000Z\",\n    \"updated_at\": \"2021-08-05T04:16:17.000000Z\",\n    \"numbers\": [\n        {\n            \"id\": 85,\n            \"bingo_id\": 4,\n            \"letter\": \"B\",\n            \"value\": 3,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:17.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:17.000000Z\"\n        },\n        {\n            \"id\": 83,\n            \"bingo_id\": 4,\n            \"letter\": \"B\",\n            \"value\": 8,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:17.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:17.000000Z\"\n        },\n        {\n            \"id\": 87,\n            \"bingo_id\": 4,\n            \"letter\": \"B\",\n            \"value\": 11,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:18.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:18.000000Z\"\n        },\n        {\n            \"id\": 84,\n            \"bingo_id\": 4,\n            \"letter\": \"B\",\n            \"value\": 12,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:17.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:17.000000Z\"\n        },\n        {\n            \"id\": 86,\n            \"bingo_id\": 4,\n            \"letter\": \"B\",\n            \"value\": 13,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:18.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:18.000000Z\"\n        },\n        {\n            \"id\": 92,\n            \"bingo_id\": 4,\n            \"letter\": \"I\",\n            \"value\": 19,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:19.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:19.000000Z\"\n        },\n        {\n            \"id\": 91,\n            \"bingo_id\": 4,\n            \"letter\": \"I\",\n            \"value\": 20,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:19.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:19.000000Z\"\n        },\n        {\n            \"id\": 88,\n            \"bingo_id\": 4,\n            \"letter\": \"I\",\n            \"value\": 23,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:18.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:18.000000Z\"\n        },\n        {\n            \"id\": 90,\n            \"bingo_id\": 4,\n            \"letter\": \"I\",\n            \"value\": 28,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:19.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:19.000000Z\"\n        },\n        {\n            \"id\": 89,\n            \"bingo_id\": 4,\n            \"letter\": \"I\",\n            \"value\": 29,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:19.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:19.000000Z\"\n        },\n        {\n            \"id\": 94,\n            \"bingo_id\": 4,\n            \"letter\": \"N\",\n            \"value\": 33,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:20.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:20.000000Z\"\n        },\n        {\n            \"id\": 95,\n            \"bingo_id\": 4,\n            \"letter\": \"N\",\n            \"value\": 39,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:20.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:20.000000Z\"\n        },\n        {\n            \"id\": 96,\n            \"bingo_id\": 4,\n            \"letter\": \"N\",\n            \"value\": 40,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:20.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:20.000000Z\"\n        },\n        {\n            \"id\": 93,\n            \"bingo_id\": 4,\n            \"letter\": \"N\",\n            \"value\": 41,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:19.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:19.000000Z\"\n        },\n        {\n            \"id\": 99,\n            \"bingo_id\": 4,\n            \"letter\": \"G\",\n            \"value\": 48,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:20.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:20.000000Z\"\n        },\n        {\n            \"id\": 97,\n            \"bingo_id\": 4,\n            \"letter\": \"G\",\n            \"value\": 49,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:20.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:20.000000Z\"\n        },\n        {\n            \"id\": 101,\n            \"bingo_id\": 4,\n            \"letter\": \"G\",\n            \"value\": 51,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:21.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:21.000000Z\"\n        },\n        {\n            \"id\": 100,\n            \"bingo_id\": 4,\n            \"letter\": \"G\",\n            \"value\": 54,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:21.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:21.000000Z\"\n        },\n        {\n            \"id\": 98,\n            \"bingo_id\": 4,\n            \"letter\": \"G\",\n            \"value\": 55,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:20.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:20.000000Z\"\n        },\n        {\n            \"id\": 104,\n            \"bingo_id\": 4,\n            \"letter\": \"O\",\n            \"value\": 61,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:21.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:21.000000Z\"\n        },\n        {\n            \"id\": 105,\n            \"bingo_id\": 4,\n            \"letter\": \"O\",\n            \"value\": 62,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:21.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:21.000000Z\"\n        },\n        {\n            \"id\": 106,\n            \"bingo_id\": 4,\n            \"letter\": \"O\",\n            \"value\": 65,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:21.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:21.000000Z\"\n        },\n        {\n            \"id\": 103,\n            \"bingo_id\": 4,\n            \"letter\": \"O\",\n            \"value\": 73,\n            \"check\": true,\n            \"created_at\": \"2021-08-05T04:16:21.000000Z\",\n            \"updated_at\": \"2021-08-05T04:23:25.000000Z\"\n        },\n        {\n            \"id\": 102,\n            \"bingo_id\": 4,\n            \"letter\": \"O\",\n            \"value\": 74,\n            \"check\": false,\n            \"created_at\": \"2021-08-05T04:16:21.000000Z\",\n            \"updated_at\": \"2021-08-05T04:16:21.000000Z\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
