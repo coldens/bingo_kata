@@ -11,7 +11,7 @@ class Game extends Model
     use HasFactory;
 
     protected $guarded = [];
-    protected $casts = [
+    protected $casts   = [
         'finished' => 'boolean',
     ];
 
