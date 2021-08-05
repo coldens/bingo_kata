@@ -2,15 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\BingoRepository;
 use App\Repositories\GameRepository;
+use Illuminate\Http\Request;
 
 class GameController extends Controller
 {
     private $gameRepository;
+    private $bingoRepository;
 
     public function __construct()
     {
         $this->gameRepository = new GameRepository();
+        $this->bingoRepository = new BingoRepository();
     }
 
     /**
@@ -55,5 +59,14 @@ class GameController extends Controller
     public function getBingoCard($id, $bingo_id)
     {
         return $this->gameRepository->getBingoCard($id, $bingo_id);
+    }
+
+    public function checkNumber(Request $request)
+    {
+        $bingo_id = $request->get('bingo_id');
+        $letter = $request->get('letter');
+        $value = $request->get('value');
+
+        return $this->bingoRepository->checkNumber($bingo_id, $letter, $value);
     }
 }
